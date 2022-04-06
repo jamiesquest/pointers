@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pointers.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="apple.cpp" />
     <ClCompile Include="basket.cpp" />
   </ItemGroup>

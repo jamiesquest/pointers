@@ -21,14 +21,7 @@ apple* basket::getApple(int index)
     return nullptr;
 }
 
-//apple* basket::getApple(int index)
-//{
-//    return nullptr;
-//};
-
 void greenBasket::gather(int sz) {
-    //greenApple app = greenApple(sz);
-    //apples.push_back(app);
     greenApple *app = new greenApple(sz);
     apples.push_back(dynamic_cast<apple*>(app));
 }
@@ -44,20 +37,21 @@ greenBasket::~greenBasket()
 
 greenApple* greenBasket::getApple(int index)
 {
-    //apple* app = apples[index];
-    //std::cout << "apple size: " << app->size << '\n';
-    //greenApple* casted = (greenApple*)&this->apples.at(index);
-    greenApple* casted;
-    if (casted = dynamic_cast<greenApple*>(apples.at(index)))
+    if (index >= apples.size())
     {
-        std::cout << "greenApple color: " << casted->color << '\n';
-        return casted;
-    } else {
-        std::cout << "invalid reference!";
         return nullptr;
-    };
-    //return dynamic_cast<greenApple*>(&apples[index]);
-    //greenApple* ptr = nullptr;
-    //ptr = dynamic_cast<greenApple*>(&apples[index]);
-    //return ptr;
+    }
+    else {
+        greenApple* casted = dynamic_cast<greenApple*>(apples.at(index));
+        return casted;
+    }
+    //greenApple* casted;
+    //if (casted = dynamic_cast<greenApple*>(apples.at(index)))
+    //{
+    //    std::cout << "greenApple color: " << casted->color << '\n';
+    //    return casted;
+    //} else {
+    //    std::cout << "invalid reference!";
+    //    return nullptr;
+    //};
 };

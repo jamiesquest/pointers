@@ -11,11 +11,8 @@ struct basket {
 };
 
 struct greenBasket : public basket {
-    //std::vector<greenApple*> apples;
     void gather(int sz);
     greenBasket();
     virtual ~greenBasket();
-    //std::vector <greenApple> apples;
     greenApple* getApple(int index) override;
-    //greenApple* getApple(int index) override;
 };
